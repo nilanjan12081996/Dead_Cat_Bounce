@@ -1,13 +1,28 @@
 import { Link, useNavigate } from "react-router-dom";
 import { LoginImg, logo } from "../../../assets/images/images";
 import { FcGoogle } from "react-icons/fc";
+import { useDispatch } from "react-redux";
+import { useForm } from "react-hook-form";
+import { login } from "../../../Reducer/AuthSlice";
 
 const Login = () => {
   const navigate = useNavigate();
-  const signinHandler = () => {
-    navigate("/dashboard");
-  };
+  const dispatch = useDispatch();
 
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    dispatch(login(data)).then((res) => {
+      console.log("res: ", res);
+      if (res?.payload?.status_code === 200) {
+        navigate("/dashboard");
+      }
+    });
+  };
   return (
     <div className="my-0 lg:my-0 mx-4 lg:mx-0 flex justify-center items-center">
       <div className="w-full my-0 mx-auto">
@@ -28,14 +43,14 @@ const Login = () => {
                 Smart
               </h1>
               <div className="login_area">
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="mb-6">
                     <input
                       type="email"
                       id="email"
                       className="bg-white border border-[#009BF2] text-[#888888] text-base rounded-xl focus:ring-[#009BF2] focus:border-[#009BF2] block w-full py-4 px-3"
                       placeholder="Enter your email address"
-                      required
+                      {...register("userName", { required: true })}
                     />
                   </div>
                   <div className="mb-6">
@@ -54,11 +69,10 @@ const Login = () => {
                       type="password"
                       id="password"
                       className="bg-white border border-[#009BF2] text-[#888888] text-base rounded-xl focus:ring-[#009BF2] focus:border-[#009BF2] block w-full py-4 px-3"
-                      required
+                      {...register("password", { required: true })}
                     />
                   </div>
                   <button
-                    onClick={signinHandler}
                     type="submit"
                     className="text-white bg-[#009BF2] font-Manrope font-extrabold text-[23px] mb-2 hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-xl w-full px-5 py-3.5 text-center"
                   >
