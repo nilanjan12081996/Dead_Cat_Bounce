@@ -11,10 +11,6 @@ import developerAI from "../imagesource/Developer_AI.png";
 import qualityAnalystAI from "../imagesource/Quality_Analyst_AI.png";
 import LoginImg from "../imagesource/login_img.png";
 import MenuIcon from "../imagesource/menu_icon.png";
-// import TopGainers01 from "../imagesource/TopGainers01.png";
-// import TopGainers02 from "../imagesource/TopGainers02.png";
-// import TopGainers03 from "../imagesource/TopGainers03.png";
-// import TopGainers04 from "../imagesource/TopGainers04.png";
 import TopGainers01 from "../imagesource/TopGainers01.png";
 import TopGainers02 from "../imagesource/TopGainers02.png";
 import TopGainers03 from "../imagesource/TopGainers03.png";
@@ -25,7 +21,20 @@ import TopLosers03 from "../imagesource/TopLosers03.png";
 import TopLosers04 from "../imagesource/TopLosers04.png";
 import PortfolioAnalytics from "../imagesource/PortfolioAnalytics.png";
 
+import AresAcquisitionCorporationIcon from "../imagesource/Ares_acquisition_corporationIcon.png";
+import CocaColaCoIcon from "../imagesource/Coca-Cola_Co_icon.png";
+import AmericanFinancialIcon from "../imagesource/American_Financial_icon.png";
+import MicrosoftCorpIcon from "../imagesource/Microsoft_Corp_icon.png";
+import UnitedParcelServiceIcon from "../imagesource/United_Parcel_ServiceIcon.png";
+import AdobeIcon from "../imagesource/Adobe_Inc_icon.png";
+
 export {
+  AresAcquisitionCorporationIcon,
+  CocaColaCoIcon,
+  AmericanFinancialIcon,
+  MicrosoftCorpIcon,
+  UnitedParcelServiceIcon,
+  AdobeIcon,
   PortfolioAnalytics,
   TopLosers01,
   TopLosers02,

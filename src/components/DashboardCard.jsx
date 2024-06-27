@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import {
+  AiFillPlusCircle,
   AiFillTag,
   AiFillTags,
   AiOutlineArrowUp,
@@ -9,6 +10,11 @@ import {
   BsCollection,
 } from "../assets/icons/index";
 import {
+  AdobeIcon,
+  AmericanFinancialIcon,
+  AresAcquisitionCorporationIcon,
+  CocaColaCoIcon,
+  MicrosoftCorpIcon,
   PortfolioAnalytics,
   TopGainers01,
   TopGainers02,
@@ -18,6 +24,7 @@ import {
   TopLosers02,
   TopLosers03,
   TopLosers04,
+  UnitedParcelServiceIcon,
   businessAnalystAI,
   businessSystemAnalystAI,
   developerAI,
@@ -37,17 +44,410 @@ const DashboardCard = () => {
         <div className="w-6/12">
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-white mb-4 md:mb-0 py-4 px-2 shadow-md rounded-xl">
-              <div className="mb-8 flex justify-between">
+              <div className="mb-4 flex justify-between">
                 <p className="text-black text-sm font-bold font-Manrope">
                   Top Gainers
                 </p>
-                <button>
-                  <AiOutlinePlus />
+                <button className="bg-[#009BF2] w-6 h-6 rounded-md flex justify-center items-center hover:bg-black">
+                  <AiOutlinePlus className="text-[12px] text-white" />
                 </button>
               </div>
+              <div>
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img
+                        src={AresAcquisitionCorporationIcon}
+                        alt="AresAcquisitionCorporationIcon"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        Ares acquisition corporation ii
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        ARES
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $102.24
+                        </p>
+                        <p className="text-[#02A339] text-xs font-Manrope font-medium">
+                          +3.02
+                        </p>
+                      </div>
+                      <div>
+                        <button>
+                          <AiFillPlusCircle className="text-[#828282] hover:text-black" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img src={CocaColaCoIcon} alt="CocaColaCoIcon" />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        Coca-Cola Co
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        KO
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $60.49
+                        </p>
+                        <p className="text-[#FF2229] text-xs font-Manrope font-medium">
+                          −0.32
+                        </p>
+                      </div>
+                      <div>
+                        <button>
+                          <AiFillPlusCircle className="text-[#828282] hover:text-black" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img
+                        src={AmericanFinancialIcon}
+                        alt="AmericanFinancialIcon"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        American Financial Group. Inc
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        AFG
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $92.94
+                        </p>
+                        <p className="text-[#02A339] text-xs font-Manrope font-medium">
+                          +0.59
+                        </p>
+                      </div>
+                      <div>
+                        <button>
+                          <AiFillPlusCircle className="text-[#828282] hover:text-black" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img src={MicrosoftCorpIcon} alt="MicrosoftCorpIcon" />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        Microsoft Corp
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        MSFT
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $248.16
+                        </p>
+                        <p className="text-[#02A339] text-xs font-Manrope font-medium">
+                          +0.16
+                        </p>
+                      </div>
+                      <div>
+                        <button>
+                          <AiFillPlusCircle className="text-[#828282] hover:text-black" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img
+                        src={UnitedParcelServiceIcon}
+                        alt="UnitedParcelServiceIcon"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        United Parcel Service, Inc.
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        UPS
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $182.09
+                        </p>
+                        <p className="text-[#02A339] text-xs font-Manrope font-medium">
+                          +2.39
+                        </p>
+                      </div>
+                      <div>
+                        <button>
+                          <AiFillPlusCircle className="text-[#828282] hover:text-black" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img src={AdobeIcon} alt="AdobeIcon" />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        Adobe Inc.
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        ADBE
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $374.03
+                        </p>
+                        <p className="text-[#FF2229] text-xs font-Manrope font-medium">
+                          −3.21
+                        </p>
+                      </div>
+                      <div>
+                        <button>
+                          <AiFillPlusCircle className="text-[#828282] hover:text-black" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="bg-white mb-4 md:mb-0 py-4 px-4 shadow-md rounded-xl">
-              sdsds
+            <div className="bg-white mb-4 md:mb-0 py-4 px-2 shadow-md rounded-xl">
+              <div className="mb-4 flex justify-between">
+                <p className="text-black text-sm font-bold font-Manrope">
+                  Top Gainers
+                </p>
+                <button className="bg-[#009BF2] w-6 h-6 rounded-md flex justify-center items-center hover:bg-black">
+                  <AiOutlinePlus className="text-[12px] text-white" />
+                </button>
+              </div>
+              <div>
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img
+                        src={AresAcquisitionCorporationIcon}
+                        alt="AresAcquisitionCorporationIcon"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        Ares acquisition corporation ii
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        ARES
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $102.24
+                        </p>
+                        <p className="text-[#02A339] text-xs font-Manrope font-medium">
+                          +3.02
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img src={CocaColaCoIcon} alt="CocaColaCoIcon" />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        Coca-Cola Co
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        KO
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $60.49
+                        </p>
+                        <p className="text-[#FF2229] text-xs font-Manrope font-medium">
+                          −0.32
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img
+                        src={AmericanFinancialIcon}
+                        alt="AmericanFinancialIcon"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        American Financial Group. Inc
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        AFG
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $92.94
+                        </p>
+                        <p className="text-[#02A339] text-xs font-Manrope font-medium">
+                          +0.59
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img src={MicrosoftCorpIcon} alt="MicrosoftCorpIcon" />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        Microsoft Corp
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        MSFT
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $248.16
+                        </p>
+                        <p className="text-[#02A339] text-xs font-Manrope font-medium">
+                          +0.16
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img
+                        src={UnitedParcelServiceIcon}
+                        alt="UnitedParcelServiceIcon"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        United Parcel Service, Inc.
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        UPS
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $182.09
+                        </p>
+                        <p className="text-[#02A339] text-xs font-Manrope font-medium">
+                          +2.39
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex justify-between border-b border-[#DDDDDD] pb-3 mb-3">
+                  <div className="flex justify-center items-center">
+                    <div className="mr-1">
+                      <img src={AdobeIcon} alt="AdobeIcon" />
+                    </div>
+                    <div>
+                      <p className="text-black text-xs font-Manrope font-semibold">
+                        Adobe Inc.
+                      </p>
+                      <p className="text-[#565656] text-xs font-Manrope font-semibold uppercase">
+                        ADBE
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <div className="flex justify-center items-center">
+                      <div className="mr-3 text-right">
+                        <p className="text-black text-xs font-Manrope font-medium">
+                          $374.03
+                        </p>
+                        <p className="text-[#FF2229] text-xs font-Manrope font-medium">
+                          −3.21
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
