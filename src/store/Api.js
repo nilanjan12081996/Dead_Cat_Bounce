@@ -72,7 +72,7 @@ const formDataURL = [''];
 api.interceptors.request.use((req) => {
   let userTokenData;
   try {
-    userTokenData = JSON.parse(localStorage.getItem('userToken'));
+    userTokenData = JSON.parse(localStorage.getItem('dcbuserToken'));
   } catch (error) {
     userTokenData = null;
   }
@@ -92,7 +92,7 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response && [401, 403].includes(error.response.status)) {
-      localStorage.removeItem('userToken');
+      localStorage.removeItem('dcbuserToken');
     }
     return Promise.reject(error);
   }

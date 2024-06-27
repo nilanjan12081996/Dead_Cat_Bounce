@@ -3,6 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import {BiSolidUser, BiSolidContact, AiFillSetting, AiOutlineLogout } from "../assets/icons/index";
 
 import UserOne from '../assets/imagesource/user/user-01.png';
+import { logout } from '../Reducer/AuthSlice';
+import { useDispatch } from 'react-redux';
+
 
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -37,8 +40,9 @@ const DropdownUser = () => {
     return () => document.removeEventListener('keydown', keyHandler);
   });
 
-
+const dispatch=useDispatch()
   const handleLogout = () => {
+   dispatch(logout()) 
     navigate("/");
   };
 

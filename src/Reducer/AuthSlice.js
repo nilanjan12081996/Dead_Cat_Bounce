@@ -104,8 +104,8 @@ const AuthSlice = createSlice(
                 state.currentUser = {};
                 state.message = null;
                 state.error = null
-                localStorage.removeItem("userToken")
-                localStorage.removeItem("user_id")
+                localStorage.removeItem('dcbuserToken')
+                localStorage.removeItem('user_id')
             }
         },
         extraReducers: (builder) => {
@@ -155,7 +155,7 @@ const AuthSlice = createSlice(
                     state.error = false;
                 })
                 .addCase(login.fulfilled, (state, { payload }) => {
-                    const { accessToken, password, userName, id } = payload;
+                    const { accessToken, password, userName, user } = payload;
                     state.isLoggedIn = true;
 
                     state.message = payload?.message;
@@ -165,12 +165,12 @@ const AuthSlice = createSlice(
                         userName: userName,
                     };
                     localStorage.setItem(
-                        'userToken',
+                        'dcbuserToken',
                         JSON.stringify({ token: accessToken })
                     );
                     localStorage.setItem(
                         'user_id',
-                        JSON.stringify({ userId: id })
+                        JSON.stringify({ userId: user?.id })
                     );
 
                 })
