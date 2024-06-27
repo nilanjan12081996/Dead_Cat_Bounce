@@ -15,7 +15,7 @@ function Header(props: {
   }) {
   return (
     <div className="z-10 sticky top-0 z-999 flex w-full bg-white shadow-md">
-        <div className="flex flex-grow items-center justify-between py-[28px] px-2 shadow-2 md:px-6 2xl:pr-11 2xl:pl-0">
+        <div className="flex flex-grow items-center justify-between py-[28px] px-2 shadow-2 md:px-6 2xl:pr-10 ">
 
             { props.sidebarOpen ?  
             <div className="flex items-center gap-2 sm:gap-4">

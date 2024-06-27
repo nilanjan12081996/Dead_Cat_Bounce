@@ -93,7 +93,8 @@ input {
 }
 
 .sidebar_menu ul li a.active {
-    color: #1e429f;
+    color: #ffffff;
+    background: #009BF2;
 }
 
 

@@ -46,8 +46,10 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { FiAlignLeft } from "react-icons/fi";
 import { PiUserList } from "react-icons/pi";
+import { RiDashboardFill } from "react-icons/ri";
 
 export {
+  RiDashboardFill,
   PiUserList,
   FiAlignLeft,
   FcGoogle,

@@ -5,7 +5,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import SidebarLinkGroup from "../layout/SidebarLinkGroup";
 import { logo } from '../../assets/images/images';
 
-import { AiFillSetting, AiFillTag, AiFillTags, AiOutlineDashboard, AiOutlineLogout, AiOutlineNotification, AiOutlineUser, BsPersonWorkspace, MdManageAccounts } from "../../assets/icons/index";
+import { AiFillSetting, AiFillTag, AiFillTags, AiOutlineDashboard, AiOutlineLogout, AiOutlineNotification, AiOutlineUser, BsPersonWorkspace, MdManageAccounts, RiDashboardFill } from "../../assets/icons/index";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -63,7 +63,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
     <aside
       ref={sidebar}
       style={{zIndex:1}}
-      className={`left-0 top-[50px] z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden shadow-md bg-white duration-300 ease-linear absolute -translate-x-full ${
+      className={`left-0 top-[50px] z-9999 flex h-screen w-72 flex-col overflow-y-hidden shadow-md bg-white duration-300 ease-linear absolute -translate-x-full ${
         sidebarOpen ? 'translate-x-0 lg:absolute lg:-translate-x-full' : 'lg:translate-x-0 lg:static'
       }`}
     >
@@ -103,32 +103,29 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
       <div className="sidebar_menu no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear overscroll-none">
         {/* <!-- Sidebar Menu --> */}
-        <nav className="mt-0 py-4 px-4 lg:px-2">
+        <nav className="mt-0 py-4 px-4 lg:px-4">
           {/* <!-- Menu Group --> */}
           <div>
-            <h3 className="mb-2 ml-4 text-sm font-semibold text-blue-800">
-              MENU
-            </h3>
 
             <ul className="mb-6 flex flex-col gap-1.5">
               {/* <!-- Menu Item Dashboard --> */}
               <li>
                 <NavLink
                   to="/dashboard"
-                  className={`group relative flex items-center gap-2 rounded-sm py-2 px-4 font-normal text-sm text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
+                  className={`group relative flex items-center gap-2 rounded-lg py-3 px-4 font-semibold text-base font-Manrope text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
                     pathname.includes('dashboard') &&
                     'bg-graydark dark:bg-meta-4'
                   }`}
                 >
                   {/* <AiOutlineNotification /> */}
-                  <AiOutlineDashboard />
-                  Dashboard
+                  <RiDashboardFill className='text-2xl' />
+                  Market Dashboard
                 </NavLink>
               </li>
               {/* <!-- Menu Item Dashboard --> */}
 
               {/* <!-- Menu Item Calendar --> */}
-              <li>
+              {/* <!--<li>
                 <NavLink
                   to="/business-analyst-ai"
                   className={`group relative flex items-center gap-2 rounded-sm py-2 px-4 font-normal text-sm text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
@@ -139,11 +136,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   <AiOutlineNotification />
                   Business Analyst AI
                 </NavLink>
-              </li>
+              </li>--> */}
               {/* <!-- Menu Item Calendar --> */}
 
               {/* <!-- Menu Item Offer Request --> */}
-              <li>
+              {/* <!--<li>
                 <NavLink
                   to="/technical-analyst-ai"
                   className={`group relative flex items-center gap-2 rounded-sm py-2 px-4 font-normal text-sm text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
@@ -157,7 +154,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               {/* <!-- Menu Item Offer Request --> */}
 
               {/* <!-- Menu Item Offer --> */}
-              <li>
+              {/* <!--<li>
                 <NavLink
                   to="/business-system-analyst-ai"
                   className={`group relative flex items-center gap-2 rounded-sm py-2 px-4 font-normal text-sm text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
@@ -167,11 +164,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   <AiOutlineNotification />
                   Business System Analyst AI
                 </NavLink>
-              </li>
+              </li>--> */}
               {/* <!-- Menu Item Offer --> */}
 
               {/* <!-- Menu Item Workspace --> */}
-                <li>
+                {/* <!--<li>
                 <NavLink
                   to="/uat-analyst-ai"
                   className={`group relative flex items-center gap-2 rounded-sm py-2 px-4 font-normal text-sm text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
@@ -182,12 +179,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   <AiOutlineNotification />
                   UAT Analyst AI
                 </NavLink>
-              </li>
+              </li>--> */}
               {/* <!-- Menu Item Workspace --> */}
 
 
               {/* <!-- Menu Item Manage Users --> */}
-                <li>
+              {/* <!--<li>
                 <NavLink
                   to="/project-manager-ai"
                   className={`group relative flex items-center gap-2 rounded-sm py-2 px-4 font-normal text-sm text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
@@ -198,12 +195,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   <AiOutlineNotification />
                   Project Manager AI
                 </NavLink>
-              </li>
+              </li>--> */}
               {/* <!-- Menu Item Manage Users --> */}
 
 
               {/* <!-- Menu Item Manage Users --> */}
-                <li>
+                {/* <!--<li>
                 <NavLink
                   to="/developer-ai"
                   className={`group relative flex items-center gap-2 rounded-sm py-2 px-4 font-normal text-sm text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
@@ -214,12 +211,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   <AiOutlineNotification />
                   Developer AI
                 </NavLink>
-              </li>
+              </li>--> */}
               {/* <!-- Menu Item Manage Users --> */}
 
 
               {/* <!-- Menu Item Manage Users --> */}
-                <li>
+                {/* <!--<li>
                 <NavLink
                   to="/quality-analyst-ai"
                   className={`group relative flex items-center gap-2 rounded-sm py-2 px-4 font-normal text-sm text-gray-600 duration-300 ease-in-out hover:bg-graydark ${
@@ -230,7 +227,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   <AiOutlineNotification />
                   Quality Analyst AI
                 </NavLink>
-              </li>
+              </li>--> */}
               {/* <!-- Menu Item Manage Users --> */}
 
 
